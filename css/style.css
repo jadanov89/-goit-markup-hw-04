@@ -146,7 +146,14 @@ a {
 }
 
 .effective {
-    background: var(--black-color);
+    max-width: 1600px;
+    height: 480px;
+    margin: 0 auto;
+    background-image: url(../image/background_img.jpg);
+    background-image: linear-gradient(47, 48, 58, 0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background: var(--black-color);*/
     padding-top: 200px;
     padding-bottom: 200px;
 }

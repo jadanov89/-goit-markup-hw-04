@@ -8,6 +8,8 @@
     --grey-color: #f5f4fa;
     --btn-hover: #188CE8;
     --border-color: #eeeeee;
+    --icon-color: #AFB1B8;
+    ;
 }
 
 body {
@@ -79,19 +81,6 @@ img {
     fill:var(--brand-color)
 }
 
-
-
-
-
-  
-
-
-
-
-
-
-
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -140,11 +129,6 @@ a {
     text-decoration: none;
 }
 
-.content-list:hover {
-    color: red;
-}
-
-
 .content-link {
     color: var(--tripartite-color);
 }
@@ -158,10 +142,6 @@ a {
 .content .content-link:focus {
     color: var(--brand-color);
 }
-
-
-
-
 
 .active {
     color: var(--brand-color);
@@ -327,7 +307,7 @@ a {
 
 .our-team-icons {
     padding-top: 12px;
-    fill: #AFB1B8;
+    fill: var(--icon-color);
 }
 
 .our-team-networks:hover,
@@ -404,22 +384,22 @@ a {
     height: 90px;
     border-radius: 4px;
     text-align: center;
-    border: 1px solid #AFB1B8; 
+    border: 1px solid var(--icon-color); 
 }
 
 .clients-icons {
     margin-top: 23px;
-    fill: #AFB1B8;
+    fill: var(--icon-color);
 }
 
 .clients-item:hover,
 .clients-item:focus {
-    border: 1px solid #2196F3;
+    border: 1px solid var(--brand-color);
 }
 
 .clients-icons:hover,
 .clients-icons:focus {
-    fill: #2196F3;
+    fill: var(--brand-color);
 }
 
 

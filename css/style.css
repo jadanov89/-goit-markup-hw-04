@@ -113,22 +113,6 @@ a {
     align-items: center;
     margin-left: 50px;
 }
-
-
-
-
-
-
-
-/*
-.content .content-link:hover,
-.content .content-link:focus {
-    color: var(--brand-color);
-}
-*/
-
-
-
 .content-list:first-child {
     margin-left: 0px;
 }
@@ -151,16 +135,11 @@ a {
 }
 
 
-.content-list:hover .icons-logo {
-    
+.content-list:hover .icons-logo,
+.content-list:focus .icons-logo {
     fill:var(--brand-color)
 }
-/*
-.icons-logo:hover  {
-    color: red;
-    fill: red
-}
-*/
+
 .munu .menu-link:hover,
 .munu .menu-link:focus {
     color: var(--brand-color);
@@ -341,19 +320,18 @@ a {
     fill: var(--icon-color);
 }
 
-
-
-
 .our-team-icons:hover,
 .our-team-icons:focus {
     fill: var(--fourth-color);
 }
 
-.our-team-networks:hover {
+.our-team-networks:hover,
+.our-team-networks:focus {
     background: var(--brand-color);
 }
 
-.our-team-networks:hover .our-team-icons {
+.our-team-networks:hover .our-team-icons,
+.our-team-networks:focus .our-team-icons {
     fill: var(--fourth-color);
 }
 

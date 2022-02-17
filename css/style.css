@@ -9,7 +9,7 @@
     --btn-hover: #188CE8;
     --border-color: #eeeeee;
     --icon-color: #AFB1B8;
-    ;
+    --card-set-gap: 30px;
 }
 
 body {
@@ -109,8 +109,25 @@ a {
     margin-right: 0px;
 }
 .content-list {
+    display: flex;
+    align-items: center;
     margin-left: 50px;
 }
+
+
+
+
+
+
+
+/*
+.content .content-link:hover,
+.content .content-link:focus {
+    color: var(--brand-color);
+}
+*/
+
+
 
 .content-list:first-child {
     margin-left: 0px;
@@ -133,6 +150,17 @@ a {
     color: var(--tripartite-color);
 }
 
+
+.content-list:hover .icons-logo {
+    
+    fill:var(--brand-color)
+}
+/*
+.icons-logo:hover  {
+    color: red;
+    fill: red
+}
+*/
 .munu .menu-link:hover,
 .munu .menu-link:focus {
     color: var(--brand-color);
@@ -159,15 +187,14 @@ a {
 }
 
 .effective {
-    max-width: 1600px;
-    margin: 0 auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  url('../image/background_img.jpg');
-    background-size: contain;
-    
-    background-color: var(--black-color);
-    padding-top: 200px;
-    padding-bottom: 200px;
+       max-width: 1600px;
+       height: 600px;
+       margin: 0 auto;
+       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+       url(../image/background_img.jpg);
+        background-size: cover;
+       background-color: var(--black-color);
+       background-repeat: no-repeat;
 }
 
 .effective-title {
@@ -177,6 +204,7 @@ a {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--fourth-color);
+    padding-top: 200px;
     
 }
 
@@ -204,9 +232,7 @@ a {
     background-color: var(--btn-hover);
 }
 
-/*h2 {
-      
-}*/
+
 
 .visually-hidden {
     position: absolute;
@@ -226,13 +252,13 @@ a {
 }
 
 .рeculiarities-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 120px;
     background: var(--grey-color);
     text-align: center;
     border-radius: 4px;
-}
-.рeculiarities-icons {
-    padding-top: 25px;
 }
 
 .рeculiarities-title {
@@ -293,6 +319,7 @@ a {
 .our-team-social-networks {
     display: flex;
     justify-content: center;
+    margin-top: 16px;
 }
 
 
@@ -300,9 +327,13 @@ a {
     width: 44px;
     height: 44px;
     text-align: center;
-    margin-top: 16px;
+    margin-right: 10px;
     border-radius: 50%;
-    background: var(--fourth-color);
+    background: var(--fourth-color);  
+}
+
+.our-team-networks:last-child {
+    margin-right: 0;
 }
 
 .our-team-icons {
@@ -310,15 +341,22 @@ a {
     fill: var(--icon-color);
 }
 
-.our-team-networks:hover,
-.our-team-networks:focus {
-    background: var(--brand-color);
-}
+
+
 
 .our-team-icons:hover,
 .our-team-icons:focus {
     fill: var(--fourth-color);
 }
+
+.our-team-networks:hover {
+    background: var(--brand-color);
+}
+
+.our-team-networks:hover .our-team-icons {
+    fill: var(--fourth-color);
+}
+
 
 .our-team-list {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -392,6 +430,10 @@ a {
     fill: var(--icon-color);
 }
 
+.clients-item:hover .clients-icons {
+    fill: var(--brand-color);
+}
+
 .clients-item:hover,
 .clients-item:focus {
     border: 1px solid var(--brand-color);
@@ -400,6 +442,7 @@ a {
 .clients-icons:hover,
 .clients-icons:focus {
     fill: var(--brand-color);
+    
 }
 
 
@@ -410,6 +453,7 @@ a {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-secko-block {
@@ -461,7 +505,6 @@ a {
     letter-spacing: 0.03em;
     color: var(--fourth-color);
     text-transform: uppercase;
-    margin-top: 15px;
     margin-bottom: 20px;
 }
 
@@ -506,7 +549,9 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -30px;
+    /*margin-top: -30px;*/
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .portfolio-button {
@@ -544,13 +589,23 @@ a {
     color: var(--secondary-color); 
 }
 
-.gallery-list {
-    box-sizing: border-box;
-    margin-top: 30px; 
+
+.gallery>.gallery-list {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 
-.gallery-list:hover,
-.gallery-list:focus {
+.gallery-image {
+    min-width: 100%;
+}
+
+.gallery-link {
+    display: block;
+}
+
+.gallery-link:hover,
+.gallery-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
